@@ -520,8 +520,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "_GoogleSignIn",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.1.0/_GoogleSignIn.xcframework.zip",
-      checksum: "215cb66771d47e5e89d0b7f1c984a36a3369af8725516ecd582e40cf7136ea9b"
+      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/10.27.0/_GoogleSignIn.xcframework.zip",
+      checksum: "8eec884e4edbb7223824d20e2753f88437cdfedd958633c24586f6752801cd54"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
