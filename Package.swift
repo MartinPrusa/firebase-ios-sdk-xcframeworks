@@ -78,10 +78,6 @@ let package = Package(
     .library(
       name: "Google-Mobile-Ads-SDK",
       targets: ["Google-Mobile-Ads-SDKTarget"]
-    ),
-    .library(
-      name: "GoogleSignIn",
-      targets: ["GoogleSignInTarget"]
     )
   ],
   dependencies: [
@@ -316,18 +312,6 @@ let package = Package(
       ],
       path: "Sources/Google-Mobile-Ads-SDK"
     ),
-    .target(
-      name: "GoogleSignInTarget",
-      dependencies: [
-        "Firebase",
-        "FirebaseAnalyticsTarget",
-        .target(name: "_AppAuth", condition: .when(platforms: [.iOS])),
-        .target(name: "_GTMAppAuth", condition: .when(platforms: [.iOS])),
-        "_GTMSessionFetcher",
-        .target(name: "_GoogleSignIn", condition: .when(platforms: [.iOS]))
-      ],
-      path: "Sources/GoogleSignIn"
-    ),
     .binaryTarget(
       name: "_AppAuth",
       url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.1.0/_AppAuth.xcframework.zip",
@@ -517,11 +501,6 @@ let package = Package(
       name: "_GoogleMobileAds",
       url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/11.1.0/_GoogleMobileAds.xcframework.zip",
       checksum: "29cc347f4742d39706fa4f89660ee6c6695a4841f6792f0ae1b80f0bbb8a88b3"
-    ),
-    .binaryTarget(
-      name: "_GoogleSignIn",
-      url: "https://github.com/akaffenberger/firebase-ios-sdk-xcframeworks/releases/download/10.27.0/_GoogleSignIn.xcframework.zip",
-      checksum: "8eec884e4edbb7223824d20e2753f88437cdfedd958633c24586f6752801cd54"
     ),
     .binaryTarget(
       name: "_GoogleUtilities",
